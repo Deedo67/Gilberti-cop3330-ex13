@@ -37,5 +37,9 @@ public class ex13 {
         double powtot = com * years;
         double total = Math.pow(subtot, powtot);
 
+        //output
+        System.out.println("$"+prin+" invested at "+rate+"% for "+years+ " years compounded "+com+" times per year is $"+String.format("%.2f", total)+".");
     }
+    //main method end
 }
+//class end
