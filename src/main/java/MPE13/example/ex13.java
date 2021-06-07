@@ -33,9 +33,11 @@ public class ex13 {
 
         //math
         double finrate = rate / 100;
-        double subtot = prin * (1 + (finrate / com));
+        double subtot = (1 + (finrate / com));
         double powtot = com * years;
-        double total = Math.pow(subtot, powtot);
+        double pretotal = Math.pow(subtot, powtot);
+        double total = pretotal * prin;
+
 
         //output
         System.out.println("$"+prin+" invested at "+rate+"% for "+years+ " years compounded "+com+" times per year is $"+String.format("%.2f", total)+".");
