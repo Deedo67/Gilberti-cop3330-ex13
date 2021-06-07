@@ -1,6 +1,7 @@
 package MPE13.example;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 /*
  *  UCF COP3330 Summer 2021 Assignment 1 Solution
@@ -28,10 +29,13 @@ public class ex13 {
         int prin = Integer.parseInt(strprin);
         double rate = Double.parseDouble(strrate);
         int years = Integer.parseInt(stryears);
+        int com = Integer.parseInt(strcom);
 
         //math
-        double finrate = rate * 0.01;
-        double total = prin * (1 + (finrate * years));
+        double finrate = rate / 100;
+        double subtot = prin * (1 + (finrate / com));
+        double powtot = com * years;
+        double total = Math.pow(subtot, powtot);
 
     }
 }
